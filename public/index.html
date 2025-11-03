@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>MediBot – Medical Chat (JP/CH/EN)</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="brand">
+          <div class="logo"><img src="/MediBot.png" alt="MediBot logo" class="logo-img" /></div>
+          <div class="meta">
+            <div class="title">MediBot</div>
+            <div class="subtitle">Multilingual medical info assistant</div>
+          </div>
+        </div>
+        <div class="toolbar">
+          <label for="languageSelect" class="label">Language</label>
+          <select id="languageSelect" class="select">
+            <option value="auto" selected>Auto</option>
+            <option value="ja">日本語</option>
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+          </select>
+          <button id="resetBtn" class="btn ghost">Reset</button>
+        </div>
+      </header>
+
+      <section id="disclaimer" class="notice" aria-live="polite"></section>
+
+      <main class="container">
+        <div class="chat-card">
+          <div id="messages" class="messages" aria-live="polite"></div>
+          <form id="chatForm" class="composer" autocomplete="off">
+            <textarea id="input" rows="3" placeholder="Ask a health question in 日本語/中文/English…"></textarea>
+            <div class="composer-bar">
+              <div class="left">
+                <small class="hint">Enter to send • Shift+Enter for newline</small>
+              </div>
+              <div class="right">
+                <button id="sendBtn" type="submit" class="btn primary">
+                  <span class="icon">➤</span>
+                  <span>Send</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <small>
+          Created by Ango 2025. All right reserved. 
+          <a href="https://n-blog.angoango.dpdns.org/" target="_blank" rel="noopener noreferrer">https://n-blog.angoango.dpdns.org/</a>
+        </small>
+      </footer>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+  </html>
